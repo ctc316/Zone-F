@@ -1,5 +1,13 @@
 <template>
   <div class="container">
+    <NewPost></NewPost>
+    <div>
+      <ul>
+        <li v-for="zone in followingZones" :key="zone.zone_id">
+          {{ zone.name }}, {{ zone.zone_id }}
+        </li>
+      </ul>
+    </div>
 
     <div class="jumbotron text-center">
             <h1>Welcome to the <strong>{{ followingZones[0]['name'] }}</strong> Example Starter App</h1>
@@ -14,16 +22,20 @@
 
 <script>
 import ZoneService from '@/services/ZoneService'
+import NewPost from '@/components/NewPost'
+
 export default {
   name: 'Home',
   data () {
     return {
-      followingZones: ZoneService.followingZones(),
+      followingZones: ZoneService.followingZones()
     }
+  },
+  components: {
+    NewPost
   }
 }
 </script>
-
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
