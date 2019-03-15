@@ -17,7 +17,7 @@
     </div>
 
     <div class="collection">
-      <img src="https://picsum.photos/1024/480/?image=10" alt="image" class="image" width="1024" height="480">
+      <img src="https://picsum.photos/1024/480/?image=10" alt="image" class="image">
       <div class="overlay"></div>
       <div class="description">This is my collection</div>
     </div>
@@ -42,54 +42,30 @@ a {
   color: #42b983;
 }
 
-.image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.overlay {
-  transition: .5s ease;
-  opacity: 1;
-  position: absolute;
-  z-index: 2;
-}
-
-.description {
-  background-color: black;
-  color: gray;
-  font-size: 20px;
-  position: absolute;
-  z-index: 3;
-  display: inline;
-}
-
 .collection {
-  .image {
-    opacity: 1;
-  }
+  width: 100%;
+  height: 500px;
+  background-color: gray;
+  margin: 0 auto;
+  position: relative;
 
   .overlay {
-    opacity: 1;
+    transition: .3s ease;
+    opacity: 0;
   }
 
   .description {
-    opacity: 1;
+    transition: .5s ease;
+    opacity: 0;
   }
-}
+} 
 
 .collection:hover {
-  .image {
-    opacity: 0.3;
-  }
-
   .overlay {
-    opacity: 1;
+    opacity: 0.3;
+    transition: .3s ease;
+    background-color: white;
   }
-
   .description {
     transition: .5s ease;
     opacity: 1;
@@ -97,5 +73,38 @@ a {
     -ms-transform: translateY(-10px);
     transform: translateY(-10px);
   }
+} 
+
+.image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 2;
+}
+
+.description {
+  width: 100%;
+  height: 100%;
+  color: dark-gray;
+  line-height: 550px;
+  font-size: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+
 </style>
