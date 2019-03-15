@@ -16,17 +16,35 @@
       </div>
     </div>
 
-    <div class="collection">
+    <MyCarousel></MyCarousel>
+
+    <!-- <div class="collection">
       <img src="https://picsum.photos/1024/480/?image=10" alt="image" class="image" width="1024" height="480">
       <div class="overlay"></div>
       <div class="description">This is my collection</div>
-    </div>
+    </div> -->
 
   </div>
 </template>
 
+<script>
+  import MyCarousel from '@/components/MyCarousel'
+
+  export default {
+    name: 'Zone',
+    components: {
+      MyCarousel
+    }
+  }
+</script>
+
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+
+.VueCarousel-slide {
+  background-color: black;
+}
+
 h1, h2 {
   font-weight: normal;
 }
@@ -77,7 +95,7 @@ a {
   }
 
   .description {
-    opacity: 1;
+    opacity: 0;
   }
 }
 
@@ -93,9 +111,9 @@ a {
   .description {
     transition: .5s ease;
     opacity: 1;
-    -webkit-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
-    transform: translateY(-10px);
+    -webkit-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    transform: translateY(-100px);
   }
 }
 </style>
