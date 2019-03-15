@@ -18,9 +18,8 @@
 
     <div class="collection">
       <img src="https://picsum.photos/1024/480/?image=10" alt="image" class="image" width="1024" height="480">
-      <div class="middle">
-        <div class="text">This is my collection</div>
-      </div>
+      <div class="overlay"></div>
+      <div class="description">This is my collection</div>
     </div>
 
   </div>
@@ -52,28 +51,51 @@ a {
   backface-visibility: hidden;
 }
 
-.middle {
+.overlay {
   transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.collection:hover .image {
-  opacity: 0.3;
-}
-
-.collection:hover .middle {
   opacity: 1;
+  position: absolute;
+  z-index: 2;
 }
 
-.text {
+.description {
+  background-color: black;
   color: gray;
   font-size: 20px;
-  text-align: center;
+  position: absolute;
+  z-index: 3;
+  display: inline;
+}
+
+.collection {
+  .image {
+    opacity: 1;
+  }
+
+  .overlay {
+    opacity: 1;
+  }
+
+  .description {
+    opacity: 1;
+  }
+}
+
+.collection:hover {
+  .image {
+    opacity: 0.3;
+  }
+
+  .overlay {
+    opacity: 1;
+  }
+
+  .description {
+    transition: .5s ease;
+    opacity: 1;
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
 }
 </style>
