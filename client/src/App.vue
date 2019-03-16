@@ -1,12 +1,17 @@
 <template>
   <div id="app">
+    <NaviBar></NaviBar>
     <router-view/>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+import NaviBar from '@/components/NaviBar'
+import Footer from '@/components/Footer'
 export default {
-  name: 'App'
+  name: 'App',
+  components: { NaviBar, Footer }
 }
 </script>
 
@@ -17,6 +22,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+
 </style>

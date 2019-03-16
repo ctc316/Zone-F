@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Posts from '@/components/Posts'
 import NewPost from '@/components/NewPost'
 import EditPost from '@/components/EditPost'
-// import Hello from '@/views/Hello'
 import Home from '@/views/Home'
 import Zone from '@/views/Zone'
 
