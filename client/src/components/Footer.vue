@@ -1,6 +1,6 @@
 <template>
   <div id="footer">
-      Copy right ......
+      © Copyright 2019 TYYZ All Rights Reserved.
   </div>
 </template>
 
@@ -15,9 +15,9 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
-  background-color: gray;
-  color: white;
+  height: 50px;
+  background-color: white;
+  color: black;
 }
 
 </style>

@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <NaviBar></NaviBar>
-    <router-view/>
-    <Footer></Footer>
+    <NaviBar/>
+    <div id="content">
+      <router-view/>
+      <Footer/>
+    </div>
+    
   </div>
 </template>
 
@@ -22,6 +25,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+#content{
+  margin-top: 150px;
 }
 
 </style>
