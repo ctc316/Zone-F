@@ -16,25 +16,35 @@
       </div>
     </div>
 
-    <div class="collection">
-      <img src="https://picsum.photos/1024/480/?image=10" alt="image" class="image">
-      <div class="overlay"></div>
-      <div class="description">This is my collection</div>
-    </div>
+    <div v-for="collection in zone.collections" :key="collection">
+      <div class="collection">
+        <div class="collection-cover">
+          <img v-bind:src="collection.cover" alt="image" class="image">
+          <div class="overlay"></div>
+          <div class="description">{{ collection.collection_name }}</div>
+        </div>
 
-    <MyCarousel></MyCarousel>
+        <MyCarousel :collections=collection.items></MyCarousel>
+      </div>
+    </div>
 
   </div>
 </template>
 
 <script>
   import MyCarousel from '@/components/MyCarousel'
+  import ZoneService from '@/services/ZoneService';
 
   export default {
     name: 'Zone',
     components: {
       MyCarousel
-    }
+    },
+    data () {
+      return {
+        zone: ZoneService.zone()
+      }
+    },
   }
 </script>
 
@@ -61,10 +71,16 @@ a {
 }
 
 .collection {
-  width: 100%;
-  height: 500px;
+  margin-bottom: 64px;
+}
+
+.collection-cover {
+  width: 80%;
+  height: 200px;
   background-color: gray;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
   position: relative;
 
   .overlay {
@@ -78,7 +94,7 @@ a {
   }
 } 
 
-.collection:hover {
+.collection-cover:hover {
   .overlay {
     opacity: 0.3;
     transition: .3s ease;
