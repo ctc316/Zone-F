@@ -121,8 +121,13 @@ export default {
 }
 
 .text-title {
-  font-size: 3em;
+  font-size: 3.2em;
   margin-top: 50px;
+  margin-bottom: 5px;
+}
+
+.text-description {
+  font-size: 1.1em;
 }
 
 .myzone {
@@ -142,20 +147,21 @@ export default {
 }
 
 .visit {
-  width: 30px;
+  width: 20px;
   height: 8px;
   display: inline;
 }
 
 .follower_section {
-  margin-left: 14%;
-  width: 72%;
-  margin-top: 15px;
-  margin-bottom: 20px;
+  margin-left: 18%;
+  width: 64%;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  margin-right: 18%;
 }
 
 .followed {
-  width: 100px;
+  width: 110px;
 }
 
 .follows {
