@@ -6,17 +6,19 @@
           <b-col v-for="col in cols" :key="col">
 
             <div v-if="(page-1)*(rows*cols) + (row-1)*(cols) + col <= collections.length">
-              <img src="https://via.placeholder.com/200x300?text=Product" alt="image" class="image" style="width: 100%">
-              <div style="display: inline-block;">
-                <div>{{ page }}, {{ row }}, {{ col }}</div>
-                <div>{{ collections[(page-1)*(rows*cols) + (row-1)*(cols) + col - 1].brand}}</div>
-                <div>{{ collections[(page-1)*(rows*cols) + (row-1)*(cols) + col - 1].name}}</div>
-                <div>${{ collections[(page-1)*(rows*cols) + (row-1)*(cols) + col - 1].price}}</div>
-              </div>
+              <a target="_blank" rel="noopener noreferrer" v-bind:href="collections[(page-1)*(rows*cols) + (row-1)*(cols) + col - 1].url">
+                <img v-bind:src="collections[(page-1)*(rows*cols) + (row-1)*(cols) + col - 1].img" alt="image" class="image" style="width: 100%">
+                <div style="display: inline-block;">
+                  <!-- <div>{{ page }}, {{ row }}, {{ col }}</div> -->
+                  <div>{{ collections[(page-1)*(rows*cols) + (row-1)*(cols) + col - 1].brand}}</div>
+                  <div>{{ collections[(page-1)*(rows*cols) + (row-1)*(cols) + col - 1].name}}</div>
+                  <div>${{ collections[(page-1)*(rows*cols) + (row-1)*(cols) + col - 1].price}}</div>
+                </div>
+              </a>
             </div>
 
             <div v-else>
-              {{ page }}, {{ row }}, {{ col }}
+              <!-- {{ page }}, {{ row }}, {{ col }} -->
             </div>
 
           </b-col>
@@ -49,6 +51,11 @@ export default {
 </script>
 
 <style>
+  a { 
+    color:black;
+    text-decoration:none;
+  }
+
   .VueCarousel-slide {
     width: 100%;
   }
