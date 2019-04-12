@@ -8,7 +8,7 @@ const zoneData = {
     "collections": [
       {
         "cover": "../../static/collections/covers/sneakers@2x.png",
-        "collection_name": "Sneakers",
+        "collection_name": "SNEAKERS",
         "items": [
           {
             "brand": "ADIDAS",
@@ -112,7 +112,7 @@ const zoneData = {
       },
       {
         "cover": "../../static/collections/covers/GYM@2x.png",
-        "collection_name": "GYM Style",
+        "collection_name": "GYM STYLE",
         "items": [
           {
             "brand": "FENDI",
@@ -181,7 +181,7 @@ const zoneData = {
     "collections": [
       {
         "cover": "../../static/collections/covers/timelessgood/lux@2x.png",
-        "collection_name": "Lux. Vintage",
+        "collection_name": "LUX. VINTAGE",
         "items": [
           {
             "brand": "CHRISTIAN DIOR VINTAGE",
@@ -278,7 +278,7 @@ const zoneData = {
       },
       {
         "cover": "../../static/collections/covers/timelessgood/m@2x.png",
-        "collection_name": "M.",
+        "collection_name": "VINTAGE M.",
         "items": [
           {
             "brand": "COMME DES GARÇONS VINTAGE",
@@ -312,7 +312,7 @@ const zoneData = {
       },
       {
         "cover": "../../static/collections/covers/timelessgood/print@2x.png",
-        "collection_name": "Print",
+        "collection_name": "VINTAGE PRINT",
         "items": [
           {
             "brand": "HERMÈS VINTAGE",
@@ -346,7 +346,7 @@ const zoneData = {
       },
       {
         "cover": "../../static/collections/covers/timelessgood/street@2x.png",
-        "collection_name": "Street",
+        "collection_name": "VINTAGE ST",
         "items": [
           {
             "brand": "GOYARD VINTAGE",
