@@ -85,7 +85,7 @@ a {
   background-color: gray;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   position: relative;
 
   .overlay {

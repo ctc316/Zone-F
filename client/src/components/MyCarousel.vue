@@ -11,8 +11,8 @@
                 <div style="display: inline-block;">
                   <!-- <div>{{ page }}, {{ row }}, {{ col }}</div> -->
                   <div>{{ collections[(page-1)*(rows*cols) + (row-1)*(cols) + col - 1].brand}}</div>
-                  <div>{{ collections[(page-1)*(rows*cols) + (row-1)*(cols) + col - 1].name}}</div>
-                  <div>${{ collections[(page-1)*(rows*cols) + (row-1)*(cols) + col - 1].price}}</div>
+                  <div class="font-ultralight">{{ collections[(page-1)*(rows*cols) + (row-1)*(cols) + col - 1].name}}</div>
+                  <div class="font-ultralight">${{ collections[(page-1)*(rows*cols) + (row-1)*(cols) + col - 1].price}}</div>
                 </div>
               </a>
             </div>
