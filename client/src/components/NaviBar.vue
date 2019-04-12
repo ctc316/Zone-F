@@ -1,19 +1,17 @@
 <template>
   <div id="navbar">
     <div class="row">
-      <div class="col-sm">
-        <img class="home" src="https://via.placeholder.com/40x40?text=home">
+      <div class="left">
+        <img class="home icon" src="../assets/home.png">
       </div>
-      <div class="col-sm">
-        <span>
-        <img class="title" src="https://via.placeholder.com/300x70?text=Zone-F">
-        <img class="my-zone" src="https://via.placeholder.com/200x30?text=My Zone">
-        </span>
+      <div class="middle">
+        <img class="title" src="../assets/zonef.png">
+        <img class="myzone" src="../assets/myzone@2x.png">
       </div>
-      <div class="col-sm">
-        <img class="favi" src="https://via.placeholder.com/40x40?text=Favi">
-        <img class="profile" src="https://via.placeholder.com/40x40?text=Profile">
-        <span class="username" v-text="'' + username"></span>
+      <div class="right">
+        <img class="favi icon" src="../assets/favi@2x.png">
+        <img class="profile icon" src="../assets/user@2x.png">
+        <div class="username" v-text="'' + username"></div>
 
       </div>
   </div>
@@ -38,17 +36,64 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 150px;
   background: white;
+  z-index: 100;
+}
+
+.left {
+  margin-left: 5%;
+  width: 15%;
+}
+
+.right {
+  width: 20%;
+}
+
+.middle {
+  width: 60%;
+}
+
+.icon {
+  weight: 18px;
+  height: 18px;
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-top:25px;
 }
 
 .username {
-  text-decoration: underline;
+  display: inline-block;
   margin-right: 30px;
+  margin-top: 25px;
+  vertical-align: middle;
+  font-weight: 200;
+  margin-left: 5px;
 }
 
 .favi {
-  margin-left: -20px;
+  margin-left: -100px;
+}
+
+.title {
+  position: absolute;
+  margin-left: -90px;
+  margin-top: 70px;
+  width: 180px;
+  height: 45px;
+}
+
+.myzone {
+  position: absolute;
+  margin-left: 130px;
+  margin-top: 75px;
+  width: 115px;
+  height: 35px;
+}
+
+img{
+  margin-top: 20px;
+  display: inline;
 }
 
 
