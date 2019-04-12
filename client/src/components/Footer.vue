@@ -1,5 +1,5 @@
 <template>
-  <div id="footer">
+  <div id="footer" class="font-ultralight">
       © Copyright 2019 TYYZ All Rights Reserved.
   </div>
 </template>

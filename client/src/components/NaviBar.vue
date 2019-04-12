@@ -9,18 +9,18 @@
         <img v-if="isHome" class="title" src="../assets/zonef.png">
         <img v-if="isHome" class="myzone" src="../assets/myzone@2x.png">
         <div v-if="!isHome" class="text-title"> {{$route.params.id}} </div>
-        <div v-if="!isHome" class="text-description"> ['{{description}}''] </div>
+        <div v-if="!isHome" class="text-description font-ultralight"> [{{description}}] </div>
         <div v-if="!isHome" class="row follower_section"> 
           <div class="col-sm" >
             <img class="visit" src="../assets/visits@2x.png"> </img> 
-            <span> {{visits}} visits </span>
+            <span class="font-ultralight"> {{visits}} visits </span>
           </div>
           <div class="col-sm" >
             <img class="followed" src="../assets/followed@2x.png"> </img> 
           </div>
           <div class="col-sm" >
             <img class="follows" src="../assets/followers@2x.png"> </img> 
-            <span> {{follows}} follows </span>
+            <span class="font-ultralight"> {{follows}} follows </span>
           </div>
         </div>
       </div>
@@ -28,7 +28,7 @@
         <img v-if="!isHome" class="myzone-icon" src="../assets/myzone@2x.png">
         <img class="favi icon" src="../assets/favi@2x.png">
         <img class="profile icon" src="../assets/user@2x.png">
-        <div class="username" v-text="'' + username"></div>
+        <div class="username font-ultralight" v-text="'' + username"></div>
 
       </div>
   </div>
@@ -167,7 +167,7 @@ export default {
 .follows {
   width: 14px;
   height: 14px;
-  margin-top: -5px;
+  margin-top: -3px;
 }
 
 

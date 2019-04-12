@@ -12,25 +12,7 @@
         <div class="col-sm"> <img class="zone_card" src="../assets/zone_cards/sparkling fabric@2x.png""> </div>
         <div class="col-sm"> <img class="zone_card" src="../assets/zone_cards/Printed Dyed@2x.png""> </div>
       </div>
-    <div class="section_title">EXPLORE MORE</div>
-    
-<!--
-    <div>
-      <ul>
-        <li v-for="zone in followingZones" :key="zone.zone_id">
-          {{ zone.name }}, {{ zone.zone_id }}
-        </li>
-      </ul>
-    </div>
-
-    <div class="jumbotron text-center">
-            <h1>Welcome to the <strong>{{ followingZones[0]['name'] }}</strong> Example Starter App</h1>
-            <p>Based on tutorial from <a target="_blank" href="https://medium.com/@anaida07/mevn-stack-application-part-1-3a27b61dcae0">here</a>.</p>
-
-        <p>Fully loaded with Docker-compose for local development, hot reload, scss in templates, and more.</p>
-        <router-link v-bind:to="{ name: 'Posts' }" class="add_post_link">View Posts App</router-link>
-    </div>
-  -->
+    <div class="section_title ">EXPLORE MORE</div>
 
 </div>
 </template>
@@ -73,7 +55,6 @@ a {
   width: 100%;
   font-size: 1.3em;
   text-decoration: underline;
-  font-weight: bold;
   margin-top:50px;
   margin-bottom:20px;
 }

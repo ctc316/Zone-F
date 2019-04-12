@@ -20,7 +20,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'hero-new', 'hero-new-hairline', 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -29,6 +29,25 @@ export default {
 
 #content{
   margin-top: 180px;
+}
+
+
+.font-ultralight { 
+  font-family: "hero-new-line", sans-serif; 
+  font-weight: 200;
+  font-style: normal;
+}
+
+.font-light { 
+  font-family: "hero-new", sans-serif; 
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-regular { 
+  font-family: "hero-new", sans-serif; 
+  font-weight: 400;
+  font-style: normal;
 }
 
 </style>
