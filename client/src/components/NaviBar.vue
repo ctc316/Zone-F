@@ -8,7 +8,7 @@
       <div class="middle">
         <img v-if="isHome" class="title" src="../assets/zonef.png">
         <img v-if="isHome" class="myzone" src="../assets/myzone@2x.png">
-        <div v-if="!isHome" class="text-title"> {{$route.params.id}} </div>
+        <div v-if="!isHome" class="text-title"> {{zoneName}} </div>
         <div v-if="!isHome" class="text-description font-ultralight"> [{{description}}] </div>
         <div v-if="!isHome" class="row follower_section"> 
           <div class="col-sm" >
@@ -37,21 +37,33 @@
 </template>
 
 <script>
+import ZoneService from '@/services/ZoneService'
 export default {
   name: 'NaviBar',
   data () {
     return {
       username: 'Yanni',
       isHome: this.$route.name == "Home",
+      zoneName: (() => {
+        if (this.$route.params.id == undefined)
+          return undefined
+        return ZoneService.getById(this.$route.params.id)['name']
+      })(),
       description: (() => {
-          return "I wear; I travel; I become"
+        if (this.$route.params.id == undefined)
+          return undefined
+        return ZoneService.getById(this.$route.params.id)['intro']
       })(),
       visits: (() => {
-        return 1314
+        if (this.$route.params.id == undefined)
+          return undefined
+        return ZoneService.getById(this.$route.params.id)['visits']
       })(),
       follows: (() => {
-        return 312
-      })(), 
+        if (this.$route.params.id == undefined)
+          return undefined
+        return ZoneService.getById(this.$route.params.id)['follows']
+      })()
     }
   },
 }

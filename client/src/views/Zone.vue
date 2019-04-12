@@ -17,7 +17,6 @@
     </div> -->
 
     <div class='place-holder'></div>
-
     <div v-for="collection in zone.collections" :key="collection">
       <div class="collection">
         <div class="collection-cover">
@@ -25,8 +24,7 @@
           <div class="overlay"></div>
           <div class="description">{{ collection.collection_name }}</div>
         </div>
-
-        <MyCarousel :collections=collection.items></MyCarousel>
+        <MyCarousel class='carousel' :collections=collection.items></MyCarousel>
       </div>
     </div>
 
@@ -35,7 +33,7 @@
 
 <script>
   import MyCarousel from '@/components/MyCarousel'
-  import ZoneService from '@/services/ZoneService';
+  import ZoneService from '@/services/ZoneService'
 
   export default {
     name: 'Zone',
@@ -43,9 +41,8 @@
       MyCarousel
     },
     data () {
-      var zone_id = this.$route.params.id
       return {
-        zone: ZoneService.zone()[zone_id]
+        zone: ZoneService.getById(this.$route.params.id)
       }
     },
   }
@@ -74,7 +71,7 @@ a {
 }
 
 .place-holder {
-  margin: 250px
+  margin-top: 260px
 }
 
 .collection {
@@ -83,8 +80,8 @@ a {
 }
 
 .collection-cover {
-  width: 800px;
-  height: 400px;
+  width: 900px;
+  height: 450px;
   background-color: gray;
   margin-left: auto;
   margin-right: auto;
@@ -140,12 +137,18 @@ a {
   width: 100%;
   height: 100%;
   color: dark-gray;
-  line-height: 550px;
+  line-height: 580px;
   font-size: 50px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 3;
+}
+
+.carousel {
+  width: 80%;
+  left: 10%;
+  
 }
 
 
