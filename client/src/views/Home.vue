@@ -3,14 +3,14 @@
     <div class="section_title"> FOLLOWING ZONES </div>
       <div class="row zone_section">
         <div class="col-sm"> <a href="zone/timelessgood"> <img class="zone_card" src="../assets/zone_cards/timelessgood@2x.png"> </a> </div>
-        <div class="col-sm"> <a href="zone/wearforspeed"><img class="zone_card" src="../assets/zone_cards/wearforspeed@2x.png""> </a> </div>
-        <div class="col-sm"> <img class="zone_card" src="../assets/zone_cards/knitted@2x.png""> </div>
+        <div class="col-sm"> <a href="zone/wearforspeed"><img class="zone_card" src="../assets/zone_cards/wearforspeed@2x.png"> </a> </div>
+        <div class="col-sm"> <img class="zone_card" src="../assets/zone_cards/knitted@2x.png"> </div>
       </div>
     <div class="section_title"> POPULAR ZONES </div>
       <div class="row zone_section">
-        <div class="col-sm"> <img class="zone_card" src="../assets/zone_cards/travelandfashion@2x.png""> </div>
-        <div class="col-sm"> <img class="zone_card" src="../assets/zone_cards/sparkling fabric@2x.png""> </div>
-        <div class="col-sm"> <img class="zone_card" src="../assets/zone_cards/Printed Dyed@2x.png""> </div>
+        <div class="col-sm"> <img class="zone_card" src="../assets/zone_cards/travelandfashion@2x.png"> </div>
+        <div class="col-sm"> <img class="zone_card" src="../assets/zone_cards/sparkling fabric@2x.png"> </div>
+        <div class="col-sm"> <img class="zone_card" src="../assets/zone_cards/Printed Dyed@2x.png"> </div>
       </div>
     <div class="section_title">EXPLORE MORE</div>
     

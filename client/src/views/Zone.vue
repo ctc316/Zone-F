@@ -1,7 +1,7 @@
 <template>
   <div class="container">
 
-    <div class="jumbotron text-center">
+    <!-- <div class="jumbotron text-center">
       <h1>Zone Name <strong>{{ $route.params.id }}</strong> </h1>
 
       <div>
@@ -14,7 +14,9 @@
           <b-col>Follower</b-col>
         </b-row>
       </div>
-    </div>
+    </div> -->
+
+    <div class='place-holder'></div>
 
     <div v-for="collection in zone.collections" :key="collection">
       <div class="collection">
@@ -41,8 +43,9 @@
       MyCarousel
     },
     data () {
+      var zone_id = this.$route.params.id
       return {
-        zone: ZoneService.zone()
+        zone: ZoneService.zone()[zone_id]
       }
     },
   }
@@ -70,13 +73,18 @@ a {
   color: #42b983;
 }
 
+.place-holder {
+  margin: 250px
+}
+
 .collection {
+  margin-top: 64px;
   margin-bottom: 64px;
 }
 
 .collection-cover {
-  width: 80%;
-  height: 200px;
+  width: 800px;
+  height: 400px;
   background-color: gray;
   margin-left: auto;
   margin-right: auto;
