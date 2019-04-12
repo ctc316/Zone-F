@@ -1,6 +1,20 @@
 <template>
   <div class="container">
-    <NewPost></NewPost>
+    <div class="section_title"> FOLLOWING ZONES </div>
+      <div class="row zone_section">
+        <div class="col-sm"> <a href="zone/timelessgood"> <img class="zone_card" src="../assets/zone_cards/timelessgood@2x.png"> </a> </div>
+        <div class="col-sm"> <a href="zone/wearforspeed"><img class="zone_card" src="../assets/zone_cards/wearforspeed@2x.png""> </a> </div>
+        <div class="col-sm"> <img class="zone_card" src="../assets/zone_cards/knitted@2x.png""> </div>
+      </div>
+    <div class="section_title"> POPULAR ZONES </div>
+      <div class="row zone_section">
+        <div class="col-sm"> <img class="zone_card" src="../assets/zone_cards/travelandfashion@2x.png""> </div>
+        <div class="col-sm"> <img class="zone_card" src="../assets/zone_cards/sparkling fabric@2x.png""> </div>
+        <div class="col-sm"> <img class="zone_card" src="../assets/zone_cards/Printed Dyed@2x.png""> </div>
+      </div>
+    <div class="section_title">EXPLORE MORE</div>
+    
+<!--
     <div>
       <ul>
         <li v-for="zone in followingZones" :key="zone.zone_id">
@@ -16,6 +30,7 @@
         <p>Fully loaded with Docker-compose for local development, hot reload, scss in templates, and more.</p>
         <router-link v-bind:to="{ name: 'Posts' }" class="add_post_link">View Posts App</router-link>
     </div>
+  -->
 
 </div>
 </template>
@@ -53,4 +68,23 @@ li {
 a {
   color: #42b983;
 }
+
+.section_title {
+  width: 100%;
+  font-size: 1.3em;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-top:50px;
+  margin-bottom:20px;
+}
+
+.zone_card {
+  width: 240px;
+  height: 320px;
+}
+.zone_section {
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
 </style>

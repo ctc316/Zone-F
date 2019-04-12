@@ -28,7 +28,7 @@ export default {
 }
 
 #content{
-  margin-top: 150px;
+  margin-top: 180px;
 }
 
 </style>
