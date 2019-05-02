@@ -5,7 +5,7 @@ import Zone from '@/views/Zone'
 
 Vue.use(Router)
 
-const BASE_URL = process.env.NODE_ENV === 'development' ? '/' : '/ZoneF/'
+const BASE_URL = process.env.NODE_ENV === 'development' ? '/' : '/zonef/'
 console.log(process.env.NODE_ENV)
 console.log(process.env.BASE_URL)
 
