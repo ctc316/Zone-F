@@ -32,8 +32,8 @@
         <!-- <div class='username font-ultralight' v-text='"" + username'></div> -->
         <b-dropdown id="dropdown-1" variant="light" class="m-2">
             <template slot="button-content">{{ username }}</template>
-            <b-dropdown-item>Settings</b-dropdown-item>
-            <b-dropdown-item>Dashboard</b-dropdown-item>
+            <b-dropdown-item>My Settings</b-dropdown-item>
+            <b-dropdown-item>My Rewards</b-dropdown-item>
             <b-dropdown-divider></b-dropdown-divider>
             <b-dropdown-item>Log Out</b-dropdown-item>
         </b-dropdown>
