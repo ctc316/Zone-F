@@ -386,29 +386,29 @@ const zoneStatus = {
   'knitted': {
     'name': 'Knitted.',
     'intro': 'My Zone',
-    'visits': '79,810',
-    'follows': '2,406',
+    'visits': '79',
+    'follows': '24',
     'followed': true
   },
   'travelandfashion': {
     'name': 'Travel and Fashion',
     'intro': 'My Zone',
-    'visits': '4,345,223',
-    'follows': '33,025',
+    'visits': '4,345',
+    'follows': '33',
     'followed': false
   },
   'sparkling fabric': {
     'name': 'Sparkling fabric.',
     'intro': 'My Zone',
-    'visits': '2,549',
-    'follows': '488',
+    'visits': '249',
+    'follows': '4',
     'followed': false
   },
   'Printed Dyed': {
     'name': 'Printed. Dyed.',
     'intro': 'My Zone',
-    'visits': '159,843',
-    'follows': '13,346',
+    'visits': '159',
+    'follows': '13',
     'followed': false
   }
 }
@@ -422,8 +422,8 @@ function getDefaultData (id) {
     'followed': zoneStatus[id].followed,
     'collections': [
       {
-        'cover': 'https://via.placeholder.com/1168x584.png?text=COMING+SOON+.',
-        'collection_name': '',
+        'cover': 'https://via.placeholder.com/1168x584.png?text=COMING+SOON',
+        'collection_name': ''
       }
     ]
   }
@@ -445,7 +445,7 @@ export default {
   getById (id) {
     if (id in zoneData) {
       return zoneData[id]
-    } 
+    }
     return getDefaultData(id)
   }
 }

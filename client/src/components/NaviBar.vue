@@ -16,7 +16,8 @@
             <span class='font-ultralight'> {{visits}} visits </span>
           </div>
           <div class='col-sm' >
-            <img class='followed' src='../assets/followed@2x.png' />
+            <img v-if='followed' class='followed' src='../assets/followed@2x.png' />
+            <img v-else class='followed' src='../assets/follow@2x.png' />
           </div>
           <div class='col-sm' >
             <img class='follows' src='../assets/followers@2x.png' />
@@ -73,6 +74,12 @@ export default {
           return undefined
         }
         return ZoneService.getById(this.$route.params.id)['follows']
+      })(),
+      followed: (() => {
+        if (this.$route.params.id === undefined) {
+          return undefined
+        }
+        return ZoneService.getById(this.$route.params.id)['followed']
       })()
     }
   }
