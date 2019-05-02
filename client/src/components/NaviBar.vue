@@ -30,9 +30,9 @@
         <img class='favi icon' src='../assets/favi@2x.png'>
         <img class='profile icon' src='../assets/user@2x.png'>
         <!-- <div class='username font-ultralight' v-text='"" + username'></div> -->
-        <b-dropdown id="dropdown-1" variant="light" class="m-2">
+        <b-dropdown id="dropdown-1" variant="light" class="m-2 font-ultralight">
             <template slot="button-content">{{ username }}</template>
-            <b-dropdown-item>My Settings</b-dropdown-item>
+            <b-dropdown-item>Settings</b-dropdown-item>
             <b-dropdown-item>My Rewards</b-dropdown-item>
             <b-dropdown-divider></b-dropdown-divider>
             <b-dropdown-item>Log Out</b-dropdown-item>
