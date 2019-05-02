@@ -382,6 +382,53 @@ const zoneData = {
   }
 }
 
+const zoneStatus = {
+  'knitted': {
+    'name': 'Knitted.',
+    'intro': 'My Zone',
+    'visits': '79,810',
+    'follows': '2,406',
+    'followed': true
+  },
+  'travelandfashion': {
+    'name': 'Travel and Fashion',
+    'intro': 'My Zone',
+    'visits': '4,345,223',
+    'follows': '33,025',
+    'followed': false
+  },
+  'sparkling fabric': {
+    'name': 'Sparkling fabric.',
+    'intro': 'My Zone',
+    'visits': '2,549',
+    'follows': '488',
+    'followed': false
+  },
+  'Printed Dyed': {
+    'name': 'Printed. Dyed.',
+    'intro': 'My Zone',
+    'visits': '159,843',
+    'follows': '13,346',
+    'followed': false
+  }
+}
+
+function getDefaultData (id) {
+  return {
+    'name': zoneStatus[id].name,
+    'intro': zoneStatus[id].intro,
+    'visits': zoneStatus[id].visits,
+    'follows': zoneStatus[id].follows,
+    'followed': zoneStatus[id].followed,
+    'collections': [
+      {
+        'cover': 'https://via.placeholder.com/1168x584.png?text=COMING+SOON+.',
+        'collection_name': '',
+      }
+    ]
+  }
+}
+
 export default {
   followingZones () {
     return [
@@ -396,6 +443,9 @@ export default {
   },
 
   getById (id) {
-    return zoneData[id]
+    if (id in zoneData) {
+      return zoneData[id]
+    } 
+    return getDefaultData(id)
   }
 }
