@@ -5,16 +5,20 @@ import Zone from '@/views/Zone'
 
 Vue.use(Router)
 
+const BASE_URL = process.env.NODE_ENV === 'development' ? '/' : '/ZoneF/'
+console.log(process.env.NODE_ENV)
+console.log(process.env.BASE_URL)
+
 export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: BASE_URL,
       name: 'Home',
       component: Home
     },
     {
-      path: '/zone/:id',
+      path: BASE_URL + 'zone/:id',
       name: 'Zone',
       component: Zone
     }
