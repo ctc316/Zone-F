@@ -1,11 +1,11 @@
 <template>
-  <div class="container">
+  <div class='container'>
 
-    <!-- <div class="jumbotron text-center">
+    <!-- <div class='jumbotron text-center'>
       <h1>Zone Name <strong>{{ $route.params.id }}</strong> </h1>
 
       <div>
-        <img src="july.jpg" alt="zone profile image" class="center">
+        <img src='july.jpg' alt='zone profile image' class='center'>
       </div>
 
       <div>
@@ -17,12 +17,12 @@
     </div> -->
 
     <div class='place-holder'></div>
-    <div v-for="collection in zone.collections" :key="collection">
-      <div class="collection">
-        <div class="collection-cover">
-          <img v-bind:src="collection.cover" alt="image" class="image">
-          <div class="overlay"></div>
-          <div class="description">{{ collection.collection_name }}</div>
+    <div v-for='collection in zone.collections' :key='collection'>
+      <div class='collection'>
+        <div class='collection-cover'>
+          <img v-bind:src='collection.cover' alt='image' class='image'>
+          <div class='overlay'></div>
+          <div class='description'>{{ collection.collection_name }}</div>
         </div>
         <MyCarousel class='carousel' :collections=collection.items></MyCarousel>
       </div>
@@ -32,24 +32,24 @@
 </template>
 
 <script>
-  import MyCarousel from '@/components/MyCarousel'
-  import ZoneService from '@/services/ZoneService'
+import MyCarousel from '@/components/MyCarousel'
+import ZoneService from '@/services/ZoneService'
 
-  export default {
-    name: 'Zone',
-    components: {
-      MyCarousel
-    },
-    data () {
-      return {
-        zone: ZoneService.getById(this.$route.params.id)
-      }
-    },
+export default {
+  name: 'Zone',
+  components: {
+    MyCarousel
+  },
+  data () {
+    return {
+      zone: ZoneService.getById(this.$route.params.id)
+    }
   }
+}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
+<!-- Add 'scoped' attribute to limit CSS to this component only -->
+<style lang='scss' scoped>
 
 .VueCarousel-slide {
   background-color: black;
@@ -97,7 +97,7 @@ a {
     transition: .5s ease;
     opacity: 0;
   }
-} 
+}
 
 .collection-cover:hover {
   .overlay {
@@ -112,7 +112,7 @@ a {
     -ms-transform: translateY(-100px);
     transform: translateY(-100px);
   }
-} 
+}
 
 .image {
   width: 100%;
@@ -148,8 +148,7 @@ a {
 .carousel {
   width: 80%;
   left: 10%;
-  
-}
 
+}
 
 </style>

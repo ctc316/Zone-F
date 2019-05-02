@@ -1,34 +1,34 @@
 <template>
-  <div id="navbar">
-    <div class="row">
-      <div class="left">
-        <a href="/"> <img class="home icon" src="../assets/home.png"> </a>
-        <a v-if="!isHome" href="/"> <img class="zonef icon" src="../assets/zonef.png"> </a>
+  <div id='navbar'>
+    <div class='row'>
+      <div class='left'>
+        <a href='/'> <img class='home icon' src='../assets/home.png'> </a>
+        <a v-if='!isHome' href='/'> <img class='zonef icon' src='../assets/zonef.png'> </a>
       </div>
-      <div class="middle">
-        <img v-if="isHome" class="title" src="../assets/zonef.png">
-        <img v-if="isHome" class="myzone" src="../assets/myzone@2x.png">
-        <div v-if="!isHome" class="text-title"> {{zoneName}} </div>
-        <div v-if="!isHome" class="text-description font-ultralight"> [{{description}}] </div>
-        <div v-if="!isHome" class="row follower_section"> 
-          <div class="col-sm" >
-            <img class="visit" src="../assets/visits@2x.png"> </img> 
-            <span class="font-ultralight"> {{visits}} visits </span>
+      <div class='middle'>
+        <img v-if='isHome' class='title' src='../assets/zonef.png'>
+        <img v-if='isHome' class='myzone' src='../assets/myzone@2x.png'>
+        <div v-if='!isHome' class='text-title'> {{zoneName}} </div>
+        <div v-if='!isHome' class='text-description font-ultralight'> [{{description}}] </div>
+        <div v-if='!isHome' class='row follower_section'>
+          <div class='col-sm' >
+            <img class='visit' src='../assets/visits@2x.png' />
+            <span class='font-ultralight'> {{visits}} visits </span>
           </div>
-          <div class="col-sm" >
-            <img class="followed" src="../assets/followed@2x.png"> </img> 
+          <div class='col-sm' >
+            <img class='followed' src='../assets/followed@2x.png' />
           </div>
-          <div class="col-sm" >
-            <img class="follows" src="../assets/followers@2x.png"> </img> 
-            <span class="font-ultralight"> {{follows}} follows </span>
+          <div class='col-sm' >
+            <img class='follows' src='../assets/followers@2x.png' />
+            <span class='font-ultralight'> {{follows}} follows </span>
           </div>
         </div>
       </div>
-      <div class="right">
-        <img v-if="!isHome" class="myzone-icon" src="../assets/myzone@2x.png">
-        <img class="favi icon" src="../assets/favi@2x.png">
-        <img class="profile icon" src="../assets/user@2x.png">
-        <div class="username font-ultralight" v-text="'' + username"></div>
+      <div class='right'>
+        <img v-if='!isHome' class='myzone-icon' src='../assets/myzone@2x.png'>
+        <img class='favi icon' src='../assets/favi@2x.png'>
+        <img class='profile icon' src='../assets/user@2x.png'>
+        <div class='username font-ultralight' v-text='"" + username'></div>
 
       </div>
   </div>
@@ -43,33 +43,37 @@ export default {
   data () {
     return {
       username: 'Yanni',
-      isHome: this.$route.name == "Home",
+      isHome: this.$route.name === 'Home',
       zoneName: (() => {
-        if (this.$route.params.id == undefined)
+        if (this.$route.params.id === undefined) {
           return undefined
+        }
         return ZoneService.getById(this.$route.params.id)['name']
       })(),
       description: (() => {
-        if (this.$route.params.id == undefined)
+        if (this.$route.params.id === undefined) {
           return undefined
+        }
         return ZoneService.getById(this.$route.params.id)['intro']
       })(),
       visits: (() => {
-        if (this.$route.params.id == undefined)
+        if (this.$route.params.id === undefined) {
           return undefined
+        }
         return ZoneService.getById(this.$route.params.id)['visits']
       })(),
       follows: (() => {
-        if (this.$route.params.id == undefined)
+        if (this.$route.params.id === undefined) {
           return undefined
+        }
         return ZoneService.getById(this.$route.params.id)['follows']
       })()
     }
-  },
+  }
 }
 </script>
 `
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 #navbar {
   position: fixed;
   top: 0;
@@ -181,6 +185,5 @@ export default {
   height: 14px;
   margin-top: -3px;
 }
-
 
 </style>

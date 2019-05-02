@@ -1,5 +1,5 @@
 <template>
-  <div id="footer" class="font-ultralight">
+  <div id='footer' class='font-ultralight'>
       © Copyright 2019 TYYZ All Rights Reserved.
   </div>
 </template>
@@ -9,8 +9,8 @@ export default {
   name: 'Footer'
 }
 </script>
-`
-<style lang="scss" scoped>
+
+<style lang='scss' scoped>
 #footer {
   top: 0;
   left: 0;

@@ -5,7 +5,7 @@
       <router-view/>
       <Footer/>
     </div>
-    
+
   </div>
 </template>
 
@@ -31,21 +31,20 @@ export default {
   margin-top: 180px;
 }
 
-
-.font-ultralight { 
-  font-family: "hero-new-line", sans-serif; 
+.font-ultralight {
+  font-family: "hero-new-line", sans-serif;
   font-weight: 200;
   font-style: normal;
 }
 
-.font-light { 
-  font-family: "hero-new", sans-serif; 
+.font-light {
+  font-family: "hero-new", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
-.font-regular { 
-  font-family: "hero-new", sans-serif; 
+.font-regular {
+  font-family: "hero-new", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
