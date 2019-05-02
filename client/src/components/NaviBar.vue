@@ -28,8 +28,14 @@
         <img v-if='!isHome' class='myzone-icon' src='../assets/myzone@2x.png'>
         <img class='favi icon' src='../assets/favi@2x.png'>
         <img class='profile icon' src='../assets/user@2x.png'>
-        <div class='username font-ultralight' v-text='"" + username'></div>
-
+        <!-- <div class='username font-ultralight' v-text='"" + username'></div> -->
+        <b-dropdown id="dropdown-1" variant="light" class="m-2">
+            <template slot="button-content">{{ username }}</template>
+            <b-dropdown-item>Settings</b-dropdown-item>
+            <b-dropdown-item>Dashboard</b-dropdown-item>
+            <b-dropdown-divider></b-dropdown-divider>
+            <b-dropdown-item>Log Out</b-dropdown-item>
+        </b-dropdown>
       </div>
   </div>
 
@@ -184,6 +190,10 @@ export default {
   width: 14px;
   height: 14px;
   margin-top: -3px;
+}
+
+#dropdown-1 {
+  top: 13px;
 }
 
 </style>
