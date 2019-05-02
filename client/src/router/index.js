@@ -3,10 +3,9 @@ import Router from 'vue-router'
 import Home from '@/views/Home'
 import Zone from '@/views/Zone'
 
-var rootPath = '/'
-if (process.env.publicPath) {
-  rootPath = process.env.publicPath
-}
+const rootPath = process.env.publicPath ? process.env.publicPath : '/'
+
+console.log(rootPath)
 
 Vue.use(Router)
 
